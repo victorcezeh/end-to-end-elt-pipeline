@@ -1,0 +1,10 @@
+[
+    {"name": "order_id", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "customer_id", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "order_status", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "order_purchase_timestamp", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "order_approved_at", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "order_delivered_carrier_date", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "order_delivered_customer_date", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "order_estimated_delivery_date", "type": "STRING", "mode": "NULLABLE"}
+]

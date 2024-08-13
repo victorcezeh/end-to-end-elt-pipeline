@@ -1,2 +1,6 @@
 venv
 pg_data
+logs
+airflow.db
+__pycache__
+airflow.cfg

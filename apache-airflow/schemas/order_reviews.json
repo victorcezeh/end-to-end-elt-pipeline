@@ -1,0 +1,9 @@
+[
+    {"name": "review_id", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "order_id", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "review_score", "type": "INTEGER", "mode": "NULLABLE"},
+    {"name": "review_comment_title", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "review_comment_message", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "review_creation_date", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "review_answer_timestamp", "type": "STRING", "mode": "NULLABLE"}
+]

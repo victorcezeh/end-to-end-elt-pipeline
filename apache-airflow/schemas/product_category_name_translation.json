@@ -1,0 +1,4 @@
+[
+    {"name": "product_category_name", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "product_category_name_english", "type": "STRING", "mode": "NULLABLE"}
+]

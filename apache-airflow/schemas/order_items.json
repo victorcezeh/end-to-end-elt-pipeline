@@ -1,0 +1,9 @@
+[
+    {"name": "order_id", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "order_item_id", "type": "INTEGER", "mode": "NULLABLE"},
+    {"name": "product_id", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "seller_id", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "shipping_limit_date", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "price", "type": "FLOAT", "mode": "NULLABLE"},
+    {"name": "freight_value", "type": "FLOAT", "mode": "NULLABLE"}
+]

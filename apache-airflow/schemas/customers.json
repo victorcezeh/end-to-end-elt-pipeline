@@ -1,0 +1,7 @@
+[
+    {"name": "customer_id", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "customer_unique_id", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "customer_zip_code_prefix", "type": "INTEGER", "mode": "NULLABLE"},
+    {"name": "customer_city", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "customer_state", "type": "STRING", "mode": "NULLABLE"}
+]

@@ -1,0 +1,8 @@
+[
+    {"name": "geolocation_id", "type": "INTEGER", "mode": "NULLABLE"},
+    {"name": "geolocation_zip_code_prefix", "type": "INTEGER", "mode": "NULLABLE"},
+    {"name": "geolocation_lat", "type": "FLOAT", "mode": "NULLABLE"},
+    {"name": "geolocation_lng", "type": "FLOAT", "mode": "NULLABLE"},
+    {"name": "geolocation_city", "type": "STRING", "mode": "NULLABLE"},
+    {"name": "geolocation_state", "type": "STRING", "mode": "NULLABLE"}
+]
