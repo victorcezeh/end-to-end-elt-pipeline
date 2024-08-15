@@ -4,3 +4,4 @@ logs
 airflow.db
 __pycache__
 airflow.cfg
+profiles.yml

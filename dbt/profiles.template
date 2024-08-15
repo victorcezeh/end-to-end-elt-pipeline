@@ -1,0 +1,17 @@
+# profiles.template.yml
+# Template configuration file for dbt profiles.
+
+ecommerce_project:
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: YOUR_PROJECT_ID
+      dataset: YOUR_DATASET_NAME
+      keyfile: 'Path to your service account JSON file'
+      location: YOUR_LOCATION
+      threads: YOUR_NUMBER_OF_THREADS
+      job_execution_timeout_seconds: YOUR_TIMEOUT_SECONDS
+      job_retries: YOUR_JOB_RETRIES
+      priority: YOUR_JOB_PRIORITY
+  target: dev

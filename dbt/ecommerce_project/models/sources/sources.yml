@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+  - name: ecommerce
+    description: "Source tables from the Brazilian e-commerce dataset."
+    database: de-capstone-project-431904
+    schema: ecommerce
+    tables:
+      - name: customers
+        description: "This dataset has information about the customer and its location."
+
+      - name: geolocation
+        description: "This dataset has information Brazilian zip codes and its lat/lng coordinates."
+
+      - name: order_items
+        description: "This dataset includes data about the items purchased within each order."
+
+      - name: order_payments
+        description: "This dataset includes data about the orders payment options."
+
+      - name: order_reviews
+        description: "This dataset includes data about the reviews made by the customers."
+
+      - name: orders
+        description: "This is the core dataset. From each order you might find all other information."
+
+      - name: product_category_name_translation
+        description: "Translates the product_category_name to english."
+
+      - name: products
+        description: "This dataset includes data about the products sold by Olist."
+
+      - name: sellers
+        description: "This dataset includes data about the sellers that fulfilled orders made at Olist."
+
