@@ -29,7 +29,7 @@ This project demonstrates an end-to-end ELT (Extract, Load, Transform) process u
 
 
 ## ELT Pipeline Architecture
-![ELT ARCHITECTURE](https://github.com/user-attachments/assets/d03b4ef7-68d1-4cb1-9b4e-d2bd8232ea52)
+![ELT ARCHITECTURE](https://github.com/user-attachments/assets/964a6b4c-9dd1-4164-8faa-14ad2248c101)
 
 
 ## Project Structure
