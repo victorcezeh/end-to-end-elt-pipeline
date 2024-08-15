@@ -154,4 +154,4 @@ For any questions or issues, please contact:
 
 ---
 
-Feel free to replace `<YOUR_POSTGRES_USER>`, `<YOUR_POSTGRES_PASSWORD>`, `<YOUR_EMAIL>`, and other placeholders with your specific information when setting up the project.
+Feel free to replace `<YOUR_POSTGRES_USER>`, `<YOUR_POSTGRES_PASSWORD>`, and other placeholders with your specific information when setting up the project.
