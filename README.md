@@ -1,10 +1,10 @@
 ---
 
-# E-Commerce ETL Project
+# E-Commerce ELT Project
 
 ## Overview
 
-This project demonstrates an end-to-end ETL (Extract, Transform, Load) process using a Brazilian E-Commerce dataset from Kaggle. The project involves data ingestion into PostgreSQL, orchestration with Apache Airflow, data transformation and modeling with dbt, and loading the transformed data into Google BigQuery. 
+This project demonstrates an end-to-end ELT (Extract, Load, Transform) process using a Brazilian E-Commerce dataset from Kaggle. The project involves data ingestion into PostgreSQL, orchestration with Apache Airflow, data transformation and modeling with dbt, and loading the transformed data into Google BigQuery. 
 
 ## Project Structure
 
