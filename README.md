@@ -1,5 +1,3 @@
----
-
 # E-Commerce ELT Project
 
 ---
@@ -85,7 +83,7 @@ Make sure to replace `<YOUR_POSTGRES_USER>` with your actual PostgreSQL username
 
 ### 5.3 Apache Airflow Setup
 
-1. **Airflow DAG**: The Airflow DAG is defined in `postgres_to_bigquery_dag.py` file under the `dags` folder. It orchestrates the ETL process by:
+1. **Airflow DAG**: The Airflow DAG is defined in the `postgres_to_bigquery_dag.py` file under the `dags` folder. It orchestrates the ETL process by:
     - Extracting data from PostgreSQL.
     - Loading data into Google Cloud Storage (GCS).
     - Loading data from GCS into BigQuery.
@@ -146,7 +144,6 @@ The query was executed to identify the top 5 product categories by total sales f
 
 These categories represent the highest sales volumes in the dataset, with the Health & Beauty category leading the list. The sales figures are represented in the local currency with high precision, highlighting the significant contribution of each category to the overall sales.
 
-
 ### Delivery Time Metrics
 
 The query was executed to calculate the average, minimum, and maximum delivery times in days from the `fct_avg_delivery_time` table. The result provides insights into the overall delivery performance:
@@ -156,7 +153,6 @@ The query was executed to calculate the average, minimum, and maximum delivery t
 - **Maximum Delivery Time**: 209 days
 
 The data reveals that, on average, deliveries take approximately 12 days to reach customers. However, the delivery time varies significantly, ranging from same-day delivery (0 days) to an extreme of 209 days. This wide range indicates a mix of efficient and delayed deliveries within the dataset.
-
 
 ### Top 5 States by Number of Orders
 
@@ -171,10 +167,8 @@ The query was run to determine the top 5 states in Brazil by the number of custo
 This ranking highlights that São Paulo (SP) significantly leads in the number of orders, followed by Rio de Janeiro (RJ) and Minas Gerais (MG). The concentration of orders in these states may reflect their larger population sizes and economic activity within Brazil.
 
 
-## 2. Brazilian E-commerce Dashboard
+## Brazilian E-commerce Dashboard
 ![BRAZILIAN E-COMMERCE INSIGHTS](https://github.com/user-attachments/assets/70157b96-5dda-42aa-8cbf-d8260191cc1a)
-
-
 
 ## 6. Explanation of Each dbt Model
 
@@ -210,7 +204,6 @@ If you have any questions, feedback, or concerns, don't hesitate to reach out:
 
 ## Contributing
 Collaboration drives innovation in data engineering. If you have suggestions, improvements, or new ideas to contribute, we welcome your input. Simply fork this repository, implement your changes, and submit a pull request. Your contributions are invaluable and greatly appreciated!
-
 
 ## Acknowledgements
 
