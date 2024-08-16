@@ -1,53 +1,54 @@
----
+Certainly! I'll provide you with the entire document again, ensuring proper alignment and functioning links for the table of contents. Here's the revised version:
 
 # E-Commerce ELT Project
 
----
-
 ## Table of Contents
-1. [Overview](#overview)
-2. [ELT Pipeline Architecture](#elt-pipeline-architecture)
-3. [Project Structure](#project-structure)
-4. [Prerequisites](#prerequisites)
-5. [Setup](#setup)
-   - [1. PostgreSQL Setup with Docker](#1-postgresql-setup-with-docker)
-   - [2. PostgreSQL Data Ingestion](#2-postgresql-data-ingestion)
-   - [3. Apache Airflow Setup](#3-apache-airflow-setup)
-   - [4. dbt Setup](#4-dbt-setup)
-   - [5. Analysis](#5-analysis)
-6. [Explanation of Each dbt Model](#explanation-of-each-dbt-model)
-   - [Staging Models](#staging-models)
-   - [Intermediate Models](#intermediate-models)
-   - [Final Models](#final-models)
-7. [License](#license)
-8. [Contact](#contact)
+1. [Overview](#1-overview)
+2. [ELT Pipeline Architecture](#2-elt-pipeline-architecture)
+3. [Project Structure](#3-project-structure)
+4. [Prerequisites](#4-prerequisites)
+5. [Setup](#5-setup)
+   - [5.1 PostgreSQL Setup with Docker](#51-postgresql-setup-with-docker)
+   - [5.2 PostgreSQL Data Ingestion](#52-postgresql-data-ingestion)
+   - [5.3 Apache Airflow Setup](#53-apache-airflow-setup)
+   - [5.4 dbt Setup](#54-dbt-setup)
+   - [5.5 Analysis](#55-analysis)
+6. [Explanation of Each dbt Model](#6-explanation-of-each-dbt-model)
+   - [6.1 Staging Models](#61-staging-models)
+   - [6.2 Intermediate Models](#62-intermediate-models)
+   - [6.3 Final Models](#63-final-models)
+7. [License](#7-license)
+8. [Contact](#8-contact)
 
 ---
 
-## Overview
+## 1. Overview
+
 This project demonstrates an end-to-end ELT (Extract, Load, Transform) process using a Brazilian E-Commerce dataset from Kaggle. The project involves data ingestion into PostgreSQL, orchestration with Apache Airflow, data transformation and modeling with dbt, and loading the transformed data into Google BigQuery.
 
+## 2. ELT Pipeline Architecture
 
-## ELT Pipeline Architecture
 ![ELT ARCHITECTURE](https://github.com/user-attachments/assets/964a6b4c-9dd1-4164-8faa-14ad2248c101)
 
+## 3. Project Structure
 
-## Project Structure
 - **PostgreSQL Scripts**: SQL scripts for creating tables and ingesting data.
 - **Airflow DAG**: Orchestrates the ETL process from PostgreSQL to BigQuery.
 - **dbt Models**: Models for transforming and modeling the data.
 - **Analysis**: SQL queries to answer key analytical questions.
 - **Docker Compose File**: Configurations for setting up PostgreSQL with Docker.
 
-## Prerequisites
+## 4. Prerequisites
+
 1. **Docker & Docker Compose**: For containerizing PostgreSQL.
 2. **Apache Airflow**: For orchestrating the ETL process.
 3. **dbt**: For transforming and modeling the data.
 4. **Google Cloud Platform Account**: For using BigQuery and Cloud Storage.
 
-## Setup
+## 5. Setup
 
-### 1. PostgreSQL Setup with Docker
+### 5.1 PostgreSQL Setup with Docker
+
 1. **Create a Docker Compose File**: Save the following content in `docker-compose.yml`:
     ```yaml
     version: '3.8'
@@ -70,18 +71,19 @@ This project demonstrates an end-to-end ELT (Extract, Load, Transform) process u
     docker-compose up -d
     ```
 
-### 2. PostgreSQL Data Ingestion
-1. **Create Tables and Import Data**: Use the provided SQL scripts to create tables and ingest data into PostgreSQL. The scripts are located in the `sql_scripts` folder and include:
-    - `create_schema_and_tables.sql`
-    - `import_data.sql`
-2. **Run SQL Scripts**:
+### 5.2 PostgreSQL Data Ingestion
+
+1. **Create Tables and Import Data**: Use the provided SQL script to create tables and ingest data into PostgreSQL. The script is located in the `infrastructure_scripts` folder and is named `init.sql`.
+2. **Run SQL Script**:
     ```bash
-    psql -h localhost -p 5434 -U <YOUR_POSTGRES_USER> -d ecommerce -f create_schema_and_tables.sql
-    psql -h localhost -p 5434 -U <YOUR_POSTGRES_USER> -d ecommerce -f import_data.sql
+    psql -h localhost -p 5434 -U <YOUR_POSTGRES_USER> -d ecommerce -f infrastructure_scripts/init.sql
     ```
 
-### 3. Apache Airflow Setup
-1. **Airflow DAG**: The Airflow DAG is defined in `airflow_dag.py`. It orchestrates the ETL process by:
+Make sure to replace `<YOUR_POSTGRES_USER>` with your actual PostgreSQL username.
+
+### 5.3 Apache Airflow Setup
+
+1. **Airflow DAG**: The Airflow DAG is defined in `postgres_to_bigquery_dag.py` file under the `dags` folder. It orchestrates the ETL process by:
     - Extracting data from PostgreSQL.
     - Loading data into Google Cloud Storage (GCS).
     - Loading data from GCS into BigQuery.
@@ -100,7 +102,8 @@ This project demonstrates an end-to-end ELT (Extract, Load, Transform) process u
     airflow scheduler
     ```
 
-### 4. dbt Setup
+### 5.4 dbt Setup
+
 1. **Define dbt Models**: The dbt models are located in the `dbt/models` directory. Key models include:
     - **Staging Models**:
         - `stg_customers.sql`: Extracts raw customer data.
@@ -121,32 +124,41 @@ This project demonstrates an end-to-end ELT (Extract, Load, Transform) process u
     dbt run
     ```
 
-### 5. Analysis
+### 5.5 Analysis
+
 1. **SQL Queries**: To answer key analytical questions, use the following queries:
     - `average_delivery_time_for_orders.sql`: Calculates average delivery time for orders.
     - `product_categories_with_highest_sales.sql`: Identifies top 5 product categories by sales.
     - `states_with_the_highest_number_of_orders.sql`: Identifies top 5 states by number of orders.
 
-## Explanation of Each dbt Model
-- **Staging Models**: Load raw data from sources into views for easier transformation.
-    - `stg_customers.sql`: Loads customer details.
-    - `stg_order_items.sql`: Loads order items with necessary data transformations.
-    - `stg_orders.sql`: Loads orders with timestamp conversion.
-    - `stg_product_category_translation.sql`: Loads category translations.
-    - `stg_products.sql`: Loads product details.
-- **Intermediate Models**: Perform aggregations and calculations.
-    - `int_avg_delivery_time.sql`: Computes delivery times from order data.
-    - `int_orders_by_state.sql`: Aggregates order counts by state.
-    - `int_sales_by_category.sql`: Calculates total sales and orders by product category.
-- **Final Models**: Produce final aggregated results for reporting and analysis.
-    - `fct_avg_delivery_time.sql`: Provides average, minimum, and maximum delivery times.
-    - `fct_orders_by_state.sql`: Ranks states by order count.
-    - `fct_sales_by_category.sql`: Ranks product categories by sales.
+## 6. Explanation of Each dbt Model
 
-## License
+### 6.1 Staging Models
+
+- **stg_customers.sql**: Loads customer details.
+- **stg_order_items.sql**: Loads order items with necessary data transformations.
+- **stg_orders.sql**: Loads orders with timestamp conversion.
+- **stg_product_category_translation.sql**: Loads category translations.
+- **stg_products.sql**: Loads product details.
+
+### 6.2 Intermediate Models
+
+- **int_avg_delivery_time.sql**: Computes delivery times from order data.
+- **int_orders_by_state.sql**: Aggregates order counts by state.
+- **int_sales_by_category.sql**: Calculates total sales and orders by product category.
+
+### 6.3 Final Models
+
+- **fct_avg_delivery_time.sql**: Provides average, minimum, and maximum delivery times.
+- **fct_orders_by_state.sql**: Ranks states by order count.
+- **fct_sales_by_category.sql**: Ranks product categories by sales.
+
+## 7. License
+
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contact
+## 8. Contact
+
 For any questions or issues, please contact:
 - **Victor Ezeh**
 - Email: ezeh_victor@yahoo.com
