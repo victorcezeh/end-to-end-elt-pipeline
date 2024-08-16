@@ -127,9 +127,9 @@ Make sure to replace `<YOUR_POSTGRES_USER>` with your actual PostgreSQL username
 ### 5.5 Analysis
 
 1. **SQL Queries**: To answer key analytical questions, use the following queries:
-    - `average_delivery_time_for_orders.sql`: Calculates average delivery time for orders.
-    - `product_categories_with_highest_sales.sql`: Identifies top 5 product categories by sales.
-    - `states_with_the_highest_number_of_orders.sql`: Identifies top 5 states by number of orders.
+   - `product_categories_with_highest_sales.sql`: Identifies top 5 product categories by sales.
+   - `states_with_the_highest_number_of_orders.sql`: Identifies top 5 states by number of orders.
+   - `average_delivery_time_for_orders.sql`: Calculates average delivery time for orders.
   
 
 ### Top 5 Product Categories by Sales
