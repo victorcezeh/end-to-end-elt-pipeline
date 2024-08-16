@@ -1,6 +1,8 @@
-Certainly! I'll provide you with the entire document again, ensuring proper alignment and functioning links for the table of contents. Here's the revised version:
+---
 
 # E-Commerce ELT Project
+
+---
 
 ## Table of Contents
 1. [Overview](#1-overview)
