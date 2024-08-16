@@ -207,7 +207,7 @@ Collaboration drives innovation in data engineering. If you have suggestions, im
 
 ## Acknowledgements
 
-I owe a special thanks to [Altschool Africa](https://altschoolafrica.com/) and [jesufemi-o](https://github.com/JesuFemi-O) for their unwavering support and invaluable expertise, which were vital to the success of this project. Their contributions made all the difference.
+I owe a special thanks to [Altschool Africa](https://altschoolafrica.com/) and [Emmanuel Ogunwede](https://github.com/JesuFemi-O) for their unwavering support and invaluable expertise, which were vital to the success of this project. Their contributions made all the difference.
 
 ---
 
