@@ -132,6 +132,49 @@ Make sure to replace `<YOUR_POSTGRES_USER>` with your actual PostgreSQL username
     - `average_delivery_time_for_orders.sql`: Calculates average delivery time for orders.
     - `product_categories_with_highest_sales.sql`: Identifies top 5 product categories by sales.
     - `states_with_the_highest_number_of_orders.sql`: Identifies top 5 states by number of orders.
+  
+
+### Top 5 Product Categories by Sales
+
+The query was executed to identify the top 5 product categories by total sales from the `fct_sales_by_category` table. The result shows the following product categories:
+
+1. **Health & Beauty (`beleza_saude`)**: $1,233,131.72
+2. **Watches & Gifts (`relogios_presentes`)**: $1,166,176.98
+3. **Bed, Bath & Table (`cama_mesa_banho`)**: $1,023,434.76
+4. **Sports & Leisure (`esporte_lazer`)**: $954,852.55
+5. **Computers & Accessories (`informatica_acessorios`)**: $888,724.61
+
+These categories represent the highest sales volumes in the dataset, with the Health & Beauty category leading the list. The sales figures are represented in the local currency with high precision, highlighting the significant contribution of each category to the overall sales.
+
+
+### Delivery Time Metrics
+
+The query was executed to calculate the average, minimum, and maximum delivery times in days from the `fct_avg_delivery_time` table. The result provides insights into the overall delivery performance:
+
+- **Average Delivery Time**: 12.09 days
+- **Minimum Delivery Time**: 0 days
+- **Maximum Delivery Time**: 209 days
+
+The data reveals that, on average, deliveries take approximately 12 days to reach customers. However, the delivery time varies significantly, ranging from same-day delivery (0 days) to an extreme of 209 days. This wide range indicates a mix of efficient and delayed deliveries within the dataset.
+
+
+### Top 5 States by Number of Orders
+
+The query was run to determine the top 5 states in Brazil by the number of customer orders, along with their respective rankings. The result is as follows:
+
+1. **São Paulo (SP)**: 41,746 orders
+2. **Rio de Janeiro (RJ)**: 12,852 orders
+3. **Minas Gerais (MG)**: 11,635 orders
+4. **Rio Grande do Sul (RS)**: 5,466 orders
+5. **Paraná (PR)**: 5,045 orders
+
+This ranking highlights that São Paulo (SP) significantly leads in the number of orders, followed by Rio de Janeiro (RJ) and Minas Gerais (MG). The concentration of orders in these states may reflect their larger population sizes and economic activity within Brazil.
+
+
+## 2. Brazilian E-commerce Dashboard
+![BRAZILIAN E-COMMERCE INSIGHTS](https://github.com/user-attachments/assets/70157b96-5dda-42aa-8cbf-d8260191cc1a)
+
+
 
 ## 6. Explanation of Each dbt Model
 
@@ -161,9 +204,17 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## 8. Contact
 
-For any questions or issues, please contact:
-- **Victor Ezeh**
-- Email: ezeh_victor@yahoo.com
+If you have any questions, feedback, or concerns, don't hesitate to reach out:
+- **Instructor**: [Emmanuel Ogunwede](https://github.com/JesuFemi-O)
+- **Student**: [Victor Ezeh](https://linktr.ee/victorcezeh)
+
+## Contributing
+Collaboration drives innovation in data engineering. If you have suggestions, improvements, or new ideas to contribute, we welcome your input. Simply fork this repository, implement your changes, and submit a pull request. Your contributions are invaluable and greatly appreciated!
+
+
+## Acknowledgements
+
+I owe a special thanks to [Altschool Africa](https://altschoolafrica.com/) and [jesufemi-o](https://github.com/JesuFemi-O) for their unwavering support and invaluable expertise, which were vital to the success of this project. Their contributions made all the difference.
 
 ---
 
