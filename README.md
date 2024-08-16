@@ -19,7 +19,9 @@
    - [6.3 Final Models](#63-final-models)
 7. [License](#7-license)
 8. [Contact](#8-contact)
-
+9. [Contributing](#9-contributing)
+10. [Acknowledgements](#10-acknowledgements)
+   
 ---
 
 ## 1. Overview
@@ -202,10 +204,10 @@ If you have any questions, feedback, or concerns, don't hesitate to reach out:
 - **Instructor**: [Emmanuel Ogunwede](https://github.com/JesuFemi-O)
 - **Student**: [Victor Ezeh](https://linktr.ee/victorcezeh)
 
-## Contributing
+## 9. Contributing
 Collaboration drives innovation in data engineering. If you have suggestions, improvements, or new ideas to contribute, we welcome your input. Simply fork this repository, implement your changes, and submit a pull request. Your contributions are invaluable and greatly appreciated!
 
-## Acknowledgements
+## 10. Acknowledgements
 
 I owe a special thanks to [Altschool Africa](https://altschoolafrica.com/) and [Emmanuel Ogunwede](https://github.com/JesuFemi-O) for their unwavering support and invaluable expertise, which were vital to the success of this project. Their contributions made all the difference.
 
