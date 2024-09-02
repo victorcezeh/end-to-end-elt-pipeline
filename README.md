@@ -26,7 +26,8 @@
 
 ## 1. Overview
 
-This project demonstrates an end-to-end ELT (Extract, Load, Transform) process using a Brazilian E-Commerce dataset from Kaggle. The project involves data ingestion into PostgreSQL, orchestration with Apache Airflow, data transformation and modeling with dbt, and loading the transformed data into Google BigQuery.
+This project demonstrates an end-to-end ELT (Extract, Load, Transform) process using a Brazilian E-Commerce dataset from Kaggle. The project involves data ingestion into PostgreSQL, orchestration with Apache Airflow, data transformation and modeling with dbt, and loading the transformed data into Google BigQuery. Dataset: [Brazilian E-Commerce Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
+
 
 ## 2. ELT Pipeline Architecture
 
@@ -103,6 +104,14 @@ Make sure to replace `<YOUR_POSTGRES_USER>` with your actual PostgreSQL username
     airflow webserver --port 8080
     airflow scheduler
     ```
+
+## Airflow Webserver UI - 1
+![Airflow UI-1](https://github.com/user-attachments/assets/139b45e0-ca8c-4166-8e0a-3b36b90228dd)
+
+
+## Airflow Webserver UI - 2
+![Airflow UI-2](https://github.com/user-attachments/assets/f27deb5b-295e-4868-bdc5-d13d81be4032)
+
 
 ### 5.4 dbt Setup
 
